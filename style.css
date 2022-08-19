@@ -1,0 +1,168 @@
+:root {
+    --light-blue: #F3F5FC;
+    --dark-blue: #0A3871;
+    --gray: #495057;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: var(--light-blue);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+header {
+    padding: 2rem 0;
+}
+
+p {
+    font-size: 12px;
+    color: #8794a1;
+}
+
+a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #495057;
+}
+
+a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: url(assets/logo.svg) center no-repeat;
+    background-size: contain;
+}
+
+main section:first-child {
+    width: 70%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+main section:nth-of-type(2){
+    background-color: #fff;
+    width: 30%;
+    height: 90vh;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+textarea:focus {
+    border-radius: 10px;
+    outline: 2px solid #374f6c47;
+}
+
+#decoder, #decoded {
+    border: none;
+    resize: none;
+    padding: 1rem;
+    font-size: 24px;
+    color: var(--dark-blue);
+}
+
+#decoder {
+    width: 90%;
+    height: 70%;
+    background-color: transparent;
+}
+
+#decoder::placeholder {
+    color: var(--dark-blue);
+}
+
+#decoded {
+    width: 100%;
+    height: 90%;
+    background: url(assets/illustration.svg) no-repeat center;
+    background-size: contain;
+    color: var(--gray);
+}
+
+.scn-btn {
+    background-color: transparent;
+    padding: 1rem;
+    margin-top: .5rem;
+    text-align: center;
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.scn-btn:hover {
+    background-color: var(--light-blue);
+}
+
+#copy {
+    width: 100%;
+    display: none;
+}
+
+.prm-btn {
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #fff;
+    border: 1px solid var(--dark-blue);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.prm-btn:hover {
+    background-color: #072B61;
+}
+
+#cript, #descript {
+    width: 45%;
+}
+
+#cript {
+    margin-right: 1rem;
+}
+
+.alert {
+    display: block;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.popup {
+    position: absolute;
+    right: 0;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+    color: var(--light-blue);
+    transition: all ease 200ms;
+    transform: translateX(0);
+    opacity: 1;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+    visibility: hidden;
+    transform: translateX(500px);
+    opacity: 0;
+}
