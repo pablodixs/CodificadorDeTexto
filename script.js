@@ -2,6 +2,7 @@
 const input = document.getElementById('decoder')
 const btnCrypt = document.getElementById('cript')
 const btnDescrypt = document.getElementById('descript')
+
 // Input de saída
 const decoded = document.getElementById('decoded')
 const copyText = document.getElementById('copy')
@@ -67,7 +68,7 @@ btnDescrypt.onclick = () => {
     let textDescrypted = descrypt(input.value)
     decoded.value = textDescrypted
     
-    if(textEncrypted == ''){
+    if(textDescrypted == ''){
         copyText.style.display = 'none'
         decoded.style.backgroundImage = 'url(assets/illustration.svg)'
     } else {
